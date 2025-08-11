@@ -1,0 +1,467 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>B-Side Buzz — Karaoke • DJ • Mobile Bar (coming soon)</title>
+  <meta name="description" content="Karaoke that turns shy singers into headliners. DJ sets that pack the floor. Mocktails today—mobile bar soon. Serving the Las Vegas Valley." />
+  <meta property="og:title" content="B-Side Buzz — Karaoke • DJ • Mobile Bar" />
+  <meta property="og:description" content="Karaoke that turns shy singers into headliners. DJ sets that pack the floor. Mocktails today—mobile bar soon." />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=1200&q=80" />
+  <meta name="theme-color" content="#111827" />
+
+  <!-- Tailwind (CDN for quick deploy). For production, we can switch to a built pipeline. -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            sans: ['ui-sans-serif','system-ui','-apple-system','Segoe UI','Roboto','Inter','Helvetica Neue','Arial','Noto Sans','sans-serif']
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Lucide icons (CDN) -->
+  <script src="https://unpkg.com/lucide@latest"></script>
+  <style>
+    /* Smooth fonts */
+    html { -webkit-font-smoothing: antialiased; -moz-osx-font-smoothing: grayscale; }
+  </style>
+</head>
+<body class="bg-gradient-to-b from-zinc-900 via-zinc-900 to-zinc-950 text-slate-900">
+  <!-- Header / Nav -->
+  <header class="sticky top-0 z-40 bg-zinc-900/70 backdrop-blur border-b border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex items-center justify-between">
+      <a href="#home" class="flex items-center gap-2 group">
+        <span class="p-2 rounded-xl bg-amber-400/20 border border-amber-400/40 shadow-inner">
+          <i data-lucide="sparkles" class="w-5 h-5 text-amber-300 group-hover:rotate-6 transition"></i>
+        </span>
+        <span class="font-black tracking-tight text-white text-xl">B-Side Buzz</span>
+      </a>
+
+      <nav class="hidden md:flex gap-6 text-sm text-zinc-200">
+        <a class="hover:text-white" href="#services">Services</a>
+        <a class="hover:text-white" href="#packages">Packages</a>
+        <a class="hover:text-white" href="#about">About</a>
+        <a class="hover:text-white" href="#gallery">Gallery</a>
+        <a class="hover:text-white" href="#faq">FAQ</a>
+        <a class="hover:text-white" href="#contact">Contact</a>
+      </nav>
+
+      <a href="#contact" class="hidden md:inline-flex items-center gap-2 bg-amber-400 text-zinc-900 font-semibold px-4 py-2 rounded-xl hover:shadow-lg hover:-translate-y-0.5 transition">
+        <i data-lucide="calendar" class="w-4 h-4"></i> Book Now
+      </a>
+
+      <button id="navToggle" class="md:hidden text-zinc-200 hover:text-white" aria-label="Toggle navigation">☰</button>
+    </div>
+    <div id="mobileNav" class="hidden md:hidden border-t border-white/10">
+      <div class="px-4 py-3 flex flex-col gap-3 text-zinc-200">
+        <a class="hover:text-white" href="#services">Services</a>
+        <a class="hover:text-white" href="#packages">Packages</a>
+        <a class="hover:text-white" href="#about">About</a>
+        <a class="hover:text-white" href="#gallery">Gallery</a>
+        <a class="hover:text-white" href="#faq">FAQ</a>
+        <a class="hover:text-white" href="#contact">Contact</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="home" class="relative overflow-hidden">
+    <div class="absolute inset-0">
+      <img
+        data-src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=2400&h=1400&q=80"
+        data-fallback-seed="bside-hero"
+        alt="Karaoke night with neon lights"
+        class="safe-img w-full h-full object-cover opacity-40"
+      />
+    </div>
+    <div class="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-28 md:py-40 text-center">
+      <h1 class="text-4xl md:text-6xl font-black tracking-tight text-white drop-shadow-lg">
+        Make Your Next Party <span class="text-amber-300">Buzz</span>
+      </h1>
+      <p class="mt-5 text-lg md:text-xl text-zinc-200 max-w-3xl mx-auto">
+        Karaoke that turns shy singers into headliners. DJ sets that pack the floor. Mocktails today—mobile bar soon.
+      </p>
+      <div class="mt-8 flex flex-col sm:flex-row gap-3 justify-center">
+        <a href="#contact" class="inline-flex items-center gap-2 bg-amber-400 text-zinc-900 font-semibold px-6 py-3 rounded-2xl hover:shadow-xl hover:-translate-y-0.5 transition">
+          Get a Quote <i data-lucide="arrow-right" class="w-5 h-5"></i>
+        </a>
+        <a href="#packages" class="inline-flex items-center gap-2 bg-white/10 text-white border border-white/20 font-semibold px-6 py-3 rounded-2xl hover:bg-white/15">
+          See Packages
+        </a>
+      </div>
+      <div class="mt-8 flex items-center justify-center gap-6 text-zinc-300 text-sm">
+        <span class="flex items-center gap-2"><i data-lucide="shield" class="w-4 h-4"></i> Insured</span>
+        <span class="flex items-center gap-2"><i data-lucide="clock" class="w-4 h-4"></i> On-Time Setup</span>
+        <span class="flex items-center gap-2"><i data-lucide="badge-check" class="w-4 h-4"></i> Pro Gear</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services -->
+  <section id="services" class="py-16 md:py-24 bg-gradient-to-b from-zinc-950 via-zinc-900 to-zinc-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-extrabold">What We Do</h2>
+        <p class="text-zinc-300 mt-3">Flexible packages for bars, backyards, weddings, and work events.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Karaoke Hosting -->
+        <div class="bg-gray-800 backdrop-blur rounded-2xl shadow-xl border border-white/40 overflow-hidden">
+          <div class="h-40 w-full overflow-hidden">
+            <img class="safe-img w-full h-full object-cover" alt="Karaoke Hosting"
+                 data-src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=1600&h=900&q=80"
+                 data-fallback-seed="karaoke-hosting" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3">
+              <i data-lucide="mic-2" class="w-6 h-6 text-amber-300"></i>
+              <h3 class="text-xl font-bold text-white">Karaoke Hosting</h3>
+            </div>
+            <p class="mt-3 text-zinc-100">Pro karaoke setup with huge song library, wireless mics, crowd-friendly hosting, and on-screen lyrics.</p>
+            <ul class="mt-4 grid grid-cols-2 gap-2 text-sm text-zinc-100">
+              <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-amber-300"></i> 4 wireless mics</li>
+              <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-amber-300"></i> 88k+ songs</li>
+              <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-amber-300"></i> Lyric screens</li>
+              <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-amber-300"></i> MC & hype</li>
+            </ul>
+          </div>
+        </div>
+        <!-- DJ Services -->
+        <div class="bg-gray-800 backdrop-blur rounded-2xl shadow-xl border border-white/40 overflow-hidden">
+          <div class="h-40 w-full overflow-hidden">
+            <img class="safe-img w-full h-full object-cover" alt="DJ Services"
+                 data-src="https://images.unsplash.com/photo-1468421870903-4df1664ac249?auto=format&fit=crop&w=1600&h=900&q=80"
+                 data-fallback-seed="dj-services" />
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3">
+              <i data-lucide="music" class="w-6 h-6 text-amber-300"></i>
+              <h3 class="text-xl font-bold text-white">DJ Services</h3>
+            </div>
+            <p class="mt-3 text-zinc-100">Custom vibe for weddings, birthdays, corporate happy hours, and neighborhood block parties.</p>
+            <ul class="mt-4 grid grid-cols-2 gap-2 text-sm text-zinc-100">
+              <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-amber-300"></i> Pro mixer & sound</li>
+              <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-amber-300"></i> Curated playlists</li>
+              <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-amber-300"></i> Dance lighting</li>
+              <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-amber-300"></i> MC included</li>
+            </ul>
+          </div>
+        </div>
+        <!-- Mobile Bar -->
+        <div class="bg-gray-800 backdrop-blur rounded-2xl shadow-xl border border-white/40 overflow-hidden">
+          <div class="h-40 w-full overflow-hidden relative">
+            <img class="safe-img w-full h-full object-cover" alt="Mobile Bar (Coming Soon)"
+                 data-src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=1600&h=900&q=80"
+                 data-fallback-seed="mobile-bar" />
+            <span class="absolute top-3 right-3 text-xs px-2 py-1 rounded-full bg-amber-400/90 text-zinc-900 font-semibold">Coming Soon</span>
+          </div>
+          <div class="p-6">
+            <div class="flex items-center gap-3">
+              <i data-lucide="wine" class="w-6 h-6 text-amber-300"></i>
+              <h3 class="text-xl font-bold text-white">Mobile Bar (Coming Soon)</h3>
+            </div>
+            <p class="mt-3 text-zinc-100">Craft mocktails now—full mobile bar activation rolling out soon. Book karaoke or DJ today and add bar later!</p>
+            <ul class="mt-4 grid grid-cols-2 gap-2 text-sm text-zinc-100">
+              <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-amber-300"></i> Tasty mocktails</li>
+              <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-amber-300"></i> Signature menu</li>
+              <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-amber-300"></i> Licensed rollout planned</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Packages -->
+  <section id="packages" class="py-16 md:py-24 bg-zinc-900 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-12">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Simple, Transparent Packages</h2>
+        <p class="text-zinc-300 mt-3">Pick a vibe. Add time. We handle the rest.</p>
+      </div>
+      <div class="grid md:grid-cols-3 gap-6">
+        <!-- Starter -->
+        <div class="relative bg-gray-800 backdrop-blur rounded-2xl shadow-xl border border-white/40">
+          <div class="p-6">
+            <h3 class="text-2xl font-extrabold flex items-baseline gap-3">Starter <span class="text-sm font-semibold text-zinc-100">2 hours</span></h3>
+            <div class="mt-2 text-4xl font-black text-amber-300">$299</div>
+            <ul class="mt-4 flex flex-col gap-2 text-zinc-100">
+              <li class="flex items-start gap-2"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> Compact sound system</li>
+              <li class="flex items-start gap-2"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> 1 host + 2 wireless mics</li>
+              <li class="flex items-start gap-2"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> Basic party lighting</li>
+              <li class="flex items-start gap-2"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> Setup/teardown included</li>
+            </ul>
+            <br/>
+            <div class="mt-6">
+              <a href="#contact" class="inline-flex items-center gap-2 bg-amber-400 text-zinc-900 font-semibold px-4 py-2 rounded-xl hover:shadow-lg">Book Starter <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            </div>
+            <p class="mt-3 text-sm text-zinc-100">Best for: House parties & small gatherings</p>
+          </div>
+        </div>
+        <!-- Buzzworthy -->
+        <div class="relative bg-gray-800 backdrop-blur rounded-2xl shadow-xl border border-white/40 ring-2 ring-amber-300">
+          <div class="absolute -top-3 right-4 bg-amber-400 text-zinc-900 text-xs font-bold px-2 py-1 rounded-full shadow">Most Popular</div>
+          <div class="p-6">
+            <h3 class="text-2xl font-extrabold flex items-baseline gap-3">Buzzworthy <span class="text-sm font-semibold text-zinc-100">4 hours</span></h3>
+            <div class="mt-2 text-4xl font-black text-amber-300">$499</div>
+            <ul class="mt-4 flex flex-col gap-2 text-zinc-100">
+              <li class="flex items-start gap-2"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> Full sound system</li>
+              <li class="flex items-start gap-2"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> 1 host + 4 wireless mics</li>
+              <li class="flex items-start gap-2"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> Dance & mood lighting</li>
+              <li class="flex items-start gap-2"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> Custom playlist + karaoke queue</li>
+            </ul>
+            <div class="mt-6">
+              <a href="#contact" class="inline-flex items-center gap-2 bg-amber-400 text-zinc-900 font-semibold px-4 py-2 rounded-xl hover:shadow-lg">Book Buzzworthy <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            </div>
+            <p class="mt-3 text-sm text-zinc-100">Best for: Birthdays, bars, & mid-size events</p>
+          </div>
+        </div>
+        <!-- Headliner -->
+        <div class="relative bg-gray-800 backdrop-blur rounded-2xl shadow-xl border border-white/40">
+          <div class="p-6">
+            <h3 class="text-2xl font-extrabold flex items-baseline gap-3">Headliner <span class="text-sm font-semibold text-zinc-100">6 hours</span></h3>
+            <div class="mt-2 text-4xl font-black text-amber-300">$899</div>
+            <ul class="mt-4 flex flex-col gap-2 text-zinc-100">
+              <li class="flex items-start gap-2"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> Premium sound & subwoofer</li>
+              <li class="flex items-start gap-2"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> MC + request concierge</li>
+              <li class="flex items-start gap-2"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> Uplighting + dance effects</li>
+              <li class="flex items-start gap-2"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> Event planning call included</li>
+            </ul>
+            <div class="mt-6">
+              <a href="#contact" class="inline-flex items-center gap-2 bg-amber-400 text-zinc-900 font-semibold px-4 py-2 rounded-xl hover:shadow-lg">Book Headliner <i data-lucide="arrow-right" class="w-4 h-4"></i></a>
+            </div>
+            <p class="mt-3 text-sm text-zinc-100">Best for: Weddings & corporate events</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="py-16 md:py-24 bg-gradient-to-b from-zinc-900 to-zinc-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-center">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-extrabold">The B-Side Story</h2>
+        <p class="mt-4 text-zinc-300">We’re Jody & Elysa—hosts, music lovers, and community builders. B-Side Buzz brings the energy of your favorite B-sides (you know, the deep cuts) to every party. We cue the tunes, hype the singers, and craft a welcoming vibe so everyone can jump in.</p>
+        <ul class="mt-6 space-y-3 text-zinc-200">
+          <li class="flex gap-2 items-start"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> Professional audio gear & wireless mics</li>
+          <li class="flex gap-2 items-start"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> Clean, modern setup that fits tight spaces</li>
+          <li class="flex gap-2 items-start"><i data-lucide="badge-check" class="w-5 h-5 text-amber-300 mt-0.5"></i> Friendly, inclusive hosting—your guests are the stars</li>
+        </ul>
+      </div>
+      <div class="relative h-80 md:h-full">
+        <img class="safe-img rounded-2xl shadow-2xl w-full h-full object-cover border border-white/10"
+             alt="Vinyl record and vibes"
+             data-src="https://images.unsplash.com/photo-1521334884684-d80222895322?auto=format&fit=crop&w=1600&h=1200&q=80"
+             data-fallback-seed="about-vinyl" />
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="py-16 md:py-24 bg-zinc-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div class="text-center mb-10">
+        <h2 class="text-3xl md:text-4xl font-extrabold">Gallery</h2>
+        <p class="text-zinc-400 mt-3">All photos via Unsplash (IDs) with automatic fallback if blocked by your host.</p>
+      </div>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-3">
+        <div class="aspect-[4/3] overflow-hidden rounded-xl border border-white/10"><img class="safe-img w-full h-full object-cover hover:scale-105 transition" alt="Gallery 1" data-src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?auto=format&fit=crop&w=800&h=600&q=80" data-fallback-seed="gallery-1"/></div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl border border-white/10"><img class="safe-img w-full h-full object-cover hover:scale-105 transition" alt="Gallery 2" data-src="https://images.unsplash.com/photo-1470225620780-dba8ba36b745?auto=format&fit=crop&w=800&h=600&q=80" data-fallback-seed="gallery-2"/></div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl border border-white/10"><img class="safe-img w-full h-full object-cover hover:scale-105 transition" alt="Gallery 3" data-src="https://images.unsplash.com/photo-1511379938547-c1f69419868d?auto=format&fit=crop&w=800&h=600&q=80" data-fallback-seed="gallery-3"/></div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl border border-white/10"><img class="safe-img w-full h-full object-cover hover:scale-105 transition" alt="Gallery 4" data-src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=800&h=600&q=80" data-fallback-seed="gallery-4"/></div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl border border-white/10"><img class="safe-img w-full h-full object-cover hover:scale-105 transition" alt="Gallery 5" data-src="https://images.unsplash.com/photo-1459749411175-04bf5292ceea?auto=format&fit=crop&w=800&h=600&q=80" data-fallback-seed="gallery-5"/></div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl border border-white/10"><img class="safe-img w-full h-full object-cover hover:scale-105 transition" alt="Gallery 6" data-src="https://images.unsplash.com/photo-1468421870903-4df1664ac249?auto=format&fit=crop&w=800&h=600&q=80" data-fallback-seed="gallery-6"/></div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl border border-white/10"><img class="safe-img w-full h-full object-cover hover:scale-105 transition" alt="Gallery 7" data-src="https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?auto=format&fit=crop&w=800&h=600&q=80" data-fallback-seed="gallery-7"/></div>
+        <div class="aspect-[4/3] overflow-hidden rounded-xl border border-white/10"><img class="safe-img w-full h-full object-cover hover:scale-105 transition" alt="Gallery 8" data-src="https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?auto=format&fit=crop&w=800&h=600&q=80" data-fallback-seed="gallery-8"/></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Service Area CTA -->
+  <section class="py-16 md:py-24 bg-gradient-to-r from-amber-300 to-yellow-400 text-zinc-900">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+      <div class="flex items-center gap-3">
+        <i data-lucide="map-pin" class="w-6 h-6"></i>
+        <div>
+          <h3 class="text-xl font-extrabold">Serving the Las Vegas Valley</h3>
+          <p class="text-zinc-700">Downtown, Summerlin, Henderson, and beyond.</p>
+        </div>
+      </div>
+      <a href="#contact" class="inline-flex items-center gap-2 bg-zinc-900 text-white px-5 py-3 rounded-xl shadow hover:-translate-y-0.5 transition">Check Dates <i data-lucide="calendar" class="w-5 h-5"></i></a>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-16 md:py-24 bg-zinc-900 text-white">
+    <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+      <h2 class="text-3xl md:text-4xl font-extrabold text-center">FAQ</h2>
+      <div class="mt-8 divide-y divide-white/10 border border-white/10 rounded-2xl overflow-hidden">
+        <details class="group p-5 open:bg-white/5">
+          <summary class="cursor-pointer list-none flex items-center justify-between text-lg font-semibold">Do you travel outside Las Vegas?<span class="ml-4 text-amber-300">+/-</span></summary>
+          <p class="mt-3 text-zinc-300">Yes! Local travel inside the Vegas Valley is included. We can travel further for a small mileage fee.</p>
+        </details>
+        <details class="group p-5 open:bg-white/5">
+          <summary class="cursor-pointer list-none flex items-center justify-between text-lg font-semibold">Can we combine DJ and Karaoke?<span class="ml-4 text-amber-300">+/-</span></summary>
+          <p class="mt-3 text-zinc-300">Absolutely. Many events start with DJ sets and switch to karaoke later—or we can mix throughout.</p>
+        </details>
+        <details class="group p-5 open:bg-white/5">
+          <summary class="cursor-pointer list-none flex items-center justify-between text-lg font-semibold">What power and space do you need?<span class="ml-4 text-amber-300">+/-</span></summary>
+          <p class="mt-3 text-zinc-300">A standard outlet (15A) within 50 ft and roughly a 10'x8' area works for most setups.</p>
+        </details>
+        <details class="group p-5 open:bg-white/5">
+          <summary class="cursor-pointer list-none flex items-center justify-between text-lg font-semibold">Are you insured?<span class="ml-4 text-amber-300">+/-</span></summary>
+          <p class="mt-3 text-zinc-300">Yes. We carry general liability insurance and can provide a COI upon request.</p>
+        </details>
+        <details class="group p-5 open:bg-white/5">
+          <summary class="cursor-pointer list-none flex items-center justify-between text-lg font-semibold">When is the mobile bar available?<span class="ml-4 text-amber-300">+/-</span></summary>
+          <p class="mt-3 text-zinc-300">We're piloting mocktails now. Full mobile bar services are slated to roll out soon—ask about timelines.</p>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact" class="py-16 md:py-24 bg-zinc-950 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid md:grid-cols-2 gap-10 items-start">
+      <div>
+        <h2 class="text-3xl md:text-4xl font-extrabold">Get a Quote</h2>
+        <p class="mt-3 text-zinc-300">Tell us about your event and we’ll confirm pricing and availability.</p>
+        <div class="mt-6 space-y-3 text-zinc-200">
+          <p class="flex items-center gap-2"><i data-lucide="phone" class="w-5 h-5 text-amber-300"></i> (702) 555‑0127</p>
+          <p class="flex items-center gap-2"><i data-lucide="mail" class="w-5 h-5 text-amber-300"></i> hello@bsidebuzz.com</p>
+          <div class="flex gap-4 pt-2">
+            <a href="#" aria-label="Instagram" class="hover:text-amber-300"><i data-lucide="instagram" class="w-5 h-5"></i></a>
+            <a href="#" aria-label="Facebook" class="hover:text-amber-300"><i data-lucide="facebook" class="w-5 h-5"></i></a>
+            <a href="#" aria-label="YouTube" class="hover:text-amber-300"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+          </div>
+        </div>
+      </div>
+      <div class="bg-white/80 backdrop-blur rounded-2xl shadow-xl border border-white/40">
+        <form class="p-6 grid grid-cols-1 gap-4" action="https://formspree.io/f/your-id" method="POST">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <label class="flex flex-col gap-1">
+              <span class="text-sm text-zinc-500">Name</span>
+              <input name="name" required class="px-4 py-3 rounded-xl bg-white/80 border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-amber-300" />
+            </label>
+            <label class="flex flex-col gap-1">
+              <span class="text-sm text-zinc-500">Email</span>
+              <input name="email" type="email" required class="px-4 py-3 rounded-xl bg-white/80 border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-amber-300" />
+            </label>
+          </div>
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <label class="flex flex-col gap-1">
+              <span class="text-sm text-zinc-500">Date</span>
+              <input name="date" type="date" class="px-4 py-3 rounded-xl bg-white/80 border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-amber-300" />
+            </label>
+            <label class="flex flex-col gap-1">
+              <span class="text-sm text-zinc-500">Location</span>
+              <input name="location" placeholder="Venue or address" class="px-4 py-3 rounded-xl bg-white/80 border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-amber-300" />
+            </label>
+          </div>
+          <label class="flex flex-col gap-1">
+            <span class="text-sm text-zinc-500">Service</span>
+            <select name="service" class="px-4 py-3 rounded-xl bg-white/80 border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-amber-300">
+              <option>Karaoke</option>
+              <option>DJ</option>
+              <option>DJ + Karaoke</option>
+              <option>Mobile Bar (Info)</option>
+            </select>
+          </label>
+          <label class="flex flex-col gap-1">
+            <span class="text-sm text-zinc-500">Estimated guest count</span>
+            <input name="guests" type="number" min="1" class="px-4 py-3 rounded-xl bg-white/80 border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-amber-300" />
+          </label>
+          <label class="flex flex-col gap-1">
+            <span class="text-sm text-zinc-500">Tell us about your event</span>
+            <textarea name="message" rows="4" placeholder="Occasion, vibe, must-play songs…" class="px-4 py-3 rounded-xl bg-white/80 border border-zinc-300 focus:outline-none focus:ring-2 focus:ring-amber-300"></textarea>
+          </label>
+          <button type="submit" class="mt-2 inline-flex items-center justify-center gap-2 bg-amber-400 text-zinc-900 font-semibold px-5 py-3 rounded-xl hover:shadow-lg">Send Request <i data-lucide="arrow-right" class="w-4 h-4"></i></button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-zinc-950 text-zinc-400 border-t border-white/10">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 grid md:grid-cols-3 gap-8">
+      <div>
+        <div class="flex items-center gap-2">
+          <i data-lucide="sparkles" class="w-5 h-5 text-amber-300"></i>
+          <span class="text-white font-black">B-Side Buzz</span>
+        </div>
+        <p class="mt-3 text-sm">Karaoke • DJ • Mobile Bar (coming soon)</p>
+      </div>
+      <div class="text-sm">
+        <p class="text-white font-semibold mb-2">Contact</p>
+        <p class="flex items-center gap-2"><i data-lucide="phone" class="w-4 h-4 text-amber-300"></i> (702) 555‑0127</p>
+        <p class="flex items-center gap-2"><i data-lucide="mail" class="w-4 h-4 text-amber-300"></i> hello@bsidebuzz.com</p>
+        <p class="flex items-center gap-2"><i data-lucide="map-pin" class="w-4 h-4 text-amber-300"></i> Las Vegas, NV</p>
+      </div>
+      <div class="text-sm">
+        <p class="text-white font-semibold mb-2">Quick Links</p>
+        <ul class="space-y-1">
+          <li><a href="#packages" class="hover:text-white">Packages</a></li>
+          <li><a href="#faq" class="hover:text-white">FAQ</a></li>
+          <li><a href="#contact" class="hover:text-white">Get a Quote</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="text-xs text-center text-zinc-500 pb-8">© <span id="year"></span> B-Side Buzz. Photos via Unsplash.</div>
+  </footer>
+
+  <script>
+    // Replace icons
+    lucide.createIcons();
+
+    // Mobile nav toggle
+    const navToggle = document.getElementById('navToggle');
+    const mobileNav = document.getElementById('mobileNav');
+    if (navToggle) {
+      navToggle.addEventListener('click', () => {
+        mobileNav.classList.toggle('hidden');
+      });
+      // Close nav when clicking a link
+      mobileNav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => mobileNav.classList.add('hidden')));
+    }
+
+    // Year in footer
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Safe image loader with fallback to picsum
+    function picsum(seed, w, h) {
+      return `https://picsum.photos/seed/${encodeURIComponent(seed)}/${w}/${h}`;
+    }
+
+    function sizeFromClassList(el) {
+      // Attempt to read width/height from data-src query
+      try {
+        const url = new URL(el.dataset.src);
+        const w = Number(url.searchParams.get('w')) || el.naturalWidth || 1600;
+        const h = Number(url.searchParams.get('h')) || el.naturalHeight || 900;
+        return { w, h };
+      } catch { return { w: 1600, h: 900 }; }
+    }
+
+    function hydrateSafeImages() {
+      document.querySelectorAll('img.safe-img').forEach(img => {
+        const { w, h } = sizeFromClassList(img);
+        img.src = img.dataset.src;
+        img.loading = img.loading || 'lazy';
+        img.addEventListener('error', () => {
+          const seed = img.dataset.fallbackSeed || 'bside-buzz';
+          img.src = picsum(seed, w, h);
+        }, { once: true });
+      });
+    }
+
+    hydrateSafeImages();
+  </script>
+</body>
+</html>
