@@ -110,7 +110,7 @@
         <h2 class="text-3xl md:text-4xl font-extrabold">What We Do</h2>
         <p class="text-zinc-300 mt-3">Flexible packages for bars, backyards, weddings, and work events.</p>
       </div>
-      <div class="grid md:grid-cols-3 gap-6">
+      <div class="grid md:grid-cols-2 gap-6">
         <!-- Karaoke Hosting -->
         <div class="bg-gray-800 backdrop-blur rounded-2xl shadow-xl border border-white/40 overflow-hidden">
           <div class="h-40 w-full overflow-hidden">
@@ -154,7 +154,7 @@
           </div>
         </div>
         <!-- Mobile Bar -->
-        <div class="bg-gray-800 backdrop-blur rounded-2xl shadow-xl border border-white/40 overflow-hidden">
+        <!-- <div class="bg-gray-800 backdrop-blur rounded-2xl shadow-xl border border-white/40 overflow-hidden">
           <div class="h-40 w-full overflow-hidden relative">
             <img class="safe-img w-full h-full object-cover" alt="Mobile Bar (Coming Soon)"
                  data-src="https://images.unsplash.com/photo-1507874457470-272b3c8d8ee2?auto=format&fit=crop&w=1600&h=900&q=80"
@@ -173,7 +173,7 @@
               <li class="flex items-center gap-2"><i data-lucide="star" class="w-4 h-4 text-amber-300"></i> Licensed rollout planned</li>
             </ul>
           </div>
-        </div>
+        </div> -->
       </div>
     </div>
   </section>
@@ -319,10 +319,10 @@
           <summary class="cursor-pointer list-none flex items-center justify-between text-lg font-semibold">Are you insured?<span class="ml-4 text-amber-300">+/-</span></summary>
           <p class="mt-3 text-zinc-300">Yes. We carry general liability insurance and can provide a COI upon request.</p>
         </details>
-        <details class="group p-5 open:bg-white/5">
+        <!-- <details class="group p-5 open:bg-white/5">
           <summary class="cursor-pointer list-none flex items-center justify-between text-lg font-semibold">When is the mobile bar available?<span class="ml-4 text-amber-300">+/-</span></summary>
           <p class="mt-3 text-zinc-300">We're piloting mocktails now. Full mobile bar services are slated to roll out soon—ask about timelines.</p>
-        </details>
+        </details> -->
       </div>
     </div>
   </section>
@@ -334,12 +334,15 @@
         <h2 class="text-3xl md:text-4xl font-extrabold">Get a Quote</h2>
         <p class="mt-3 text-zinc-300">Tell us about your event and we’ll confirm pricing and availability.</p>
         <div class="mt-6 space-y-3 text-zinc-200">
-          <p class="flex items-center gap-2"><i data-lucide="phone" class="w-5 h-5 text-amber-300"></i> (702) 555‑0127</p>
-          <p class="flex items-center gap-2"><i data-lucide="mail" class="w-5 h-5 text-amber-300"></i> hello@bsidebuzz.com</p>
+          <p class="flex items-center gap-2"><i data-lucide="phone" class="w-5 h-5 text-amber-300"></i> <a href="tel:(702) 555-0127">(702) 555-0127</a></p>
+          <p class="flex items-center gap-2"><i data-lucide="mail" class="w-5 h-5 text-amber-300"></i> <a href="mailto:hello@bsidebuzz.com">hello@bsidebuzz.com</a></p>
           <div class="flex gap-4 pt-2">
-            <a href="#" aria-label="Instagram" class="hover:text-amber-300"><i data-lucide="instagram" class="w-5 h-5"></i></a>
-            <a href="#" aria-label="Facebook" class="hover:text-amber-300"><i data-lucide="facebook" class="w-5 h-5"></i></a>
-            <a href="#" aria-label="YouTube" class="hover:text-amber-300"><i data-lucide="youtube" class="w-5 h-5"></i></a>
+            <a href="#" aria-label="Instagram" class="hover:text-amber-300"><i data-lucide="instagram" class="w-8 h-8"></i></a>
+            <a href="#" aria-label="Facebook" class="hover:text-amber-300"><i data-lucide="facebook" class="w-8 h-8"></i></a>
+            <a href="#" aria-label="YouTube" class="hover:text-amber-300"><i data-lucide="youtube" class="w-8 h-8"></i></a>
+            <a href="#" aria-label="TikTok" class="hover:text-amber-300">
+              <svg class="w-8 h-8"><use href="#icon-tiktok-filled"></use></svg>
+            </a>
           </div>
         </div>
       </div>
@@ -371,7 +374,7 @@
               <option>Karaoke</option>
               <option>DJ</option>
               <option>DJ + Karaoke</option>
-              <option>Mobile Bar (Info)</option>
+              <!-- <option>Mobile Bar (Info)</option> -->
             </select>
           </label>
           <label class="flex flex-col gap-1">
@@ -463,5 +466,11 @@
 
     hydrateSafeImages();
   </script>
+
+  <svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+    <symbol id="icon-tiktok-filled" viewBox="0 0 24 24">
+      <path fill="currentColor" d="M12.742 2h3.14c.4 1.26 1.18 2.372 2.26 3.21 1.03.8 2.27 1.25 3.558 1.31v3.24c-1.26 0-2.52-.31-3.66-.9-.43-.22-.84-.48-1.22-.77l-.01 6.85c0 4.09-3.32 7.41-7.42 7.41A7.42 7.42 0 0 1 2.97 15.9c0-3.94 3.05-7.16 6.96-7.39v3.29a3.11 3.11 0 0 0-3.08 3.1 3.11 3.11 0 0 0 3.11 3.11 3.11 3.11 0 0 0 3.11-3.11V2z"/>
+    </symbol>
+  </svg>
 </body>
 </html>
